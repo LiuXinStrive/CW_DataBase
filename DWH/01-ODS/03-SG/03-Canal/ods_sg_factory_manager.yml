@@ -1,0 +1,29 @@
+dataSourceKey: sgDS
+destination: sg
+groupId: g_sg
+outerAdapterKey: adb_sg
+concurrent: false
+dbMapping:
+  database: assign_cw
+  table: factory_manager
+  targetDatabase: ODS
+  targetTable: ods_sg_factory_manager
+  # 主键
+  targetPk:
+    id: id
+  # 关闭全字段自动映射，手动定义字段映射
+  mapAllColumns: false
+  # 字段映射
+  targetColumns:
+    id: id
+    one_customer: one_customer
+    code: code
+    factory_name: factory_name
+    gmt_create: gmt_create
+    card_ids: card_ids
+    order_by: order_by
+fullBatch:
+  enable: true
+  startupTime: 2000-01-01 00:00:00
+  sleepBatchTime: 1000
+  batchSize: 1000

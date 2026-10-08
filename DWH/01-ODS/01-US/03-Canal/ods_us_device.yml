@@ -1,0 +1,96 @@
+dataSourceKey: usDS
+destination: us
+groupId: g_us
+outerAdapterKey: adb_us
+concurrent: false
+dbMapping:
+  database: assign_cw
+  table: device
+  targetDatabase: ODS
+  targetTable: ods_us_device
+  # 主键
+  targetPk:
+    id: id
+  # 关闭全字段自动映射，手动定义字段映射
+  mapAllColumns: false
+  # 字段映射
+  targetColumns:
+    id: id
+    uid: uid
+    uid_reverse: uid_reverse
+    org_code: org_code
+    model: model
+    manufacturer: manufacturer
+    camera_sn: camera_sn
+    camera_type: camera_type
+    equip_admin: equip_admin
+    equip_pass: equip_pass
+    device_server: device_server
+    alarm_server: alarm_server
+    connect_type: connect_type
+    trade_id: trade_id
+    bind_user_id: bind_user_id
+    bind_time: bind_time
+    is_share: is_share
+    firmware_version: firmware_version
+    gmt_create: gmt_create
+    gmt_modify: gmt_modify
+    plan_id: plan_id
+    plan_status: plan_status
+    issued_server: issued_server
+    plan_retry_size: plan_retry_size
+    plan_modify_time: plan_modify_time
+    black: black
+    cloud_server: cloud_server
+    ddns_status: ddns_status
+    ddns_status_time: ddns_status_time
+    is_need_card: is_need_card
+    default_name: default_name
+    iccid: iccid
+    imei: imei
+    assign_time: assign_time
+    card_org: card_org
+    card_status: card_status
+    external_model: external_model
+    ty_id: ty_id
+    ty_code: ty_code
+    pid: pid
+    kcp_port: kcp_port
+    model_type: model_type
+    model_version: model_version
+    profit: profit
+    capability: capability
+    capability_key: capability_key
+    enable: enable
+    contract_op_username: contract_op_username
+    contract_op_time: contract_op_time
+    recycle_time: recycle_time
+    promo_type: promo_type
+    own_user_id: own_user_id
+    own_time: own_time
+    is_produce: is_produce
+    channel: channel
+    produce_time: produce_time
+    is_direct: is_direct
+    direct_op_username: direct_op_username
+    direct_op_time: direct_op_time
+    ip_operator: ip_operator
+    city_id: city_id
+    advert_id: advert_id
+    province_id: province_id
+    country_id: country_id
+    merchant_code: merchant_code
+    last_timer: last_timer
+    country_code: country_code
+    country_name: country_name
+    continent_code: continent_code
+    continent_name: continent_name
+    ip: ip
+    interpolation: interpolation
+    stream_type: stream_type
+    sd_status: sd_status
+fullBatch:
+  enable: true
+  startupTime: 2000-01-01 00:00:00
+  sleepBatchTime: 1000
+  batchSize: 1000

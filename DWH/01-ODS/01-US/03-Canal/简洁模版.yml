@@ -1,0 +1,18 @@
+dataSourceKey: defaultDS
+destination: example
+groupId: g1
+outerAdapterKey: adb_target
+concurrent: false
+dbMapping:
+  database: assign_cw
+  table: pop_up_notification
+  targetDatabase: ODS
+  targetTable: ods_us_pop_up_notification
+  targetPk:
+    id: id
+  mapAllColumns: true
+fullBatch:
+  enable: true
+  startupTime: 2000-01-01 00:00:00
+  sleepBatchTime: 1000
+  batchSize: 1000

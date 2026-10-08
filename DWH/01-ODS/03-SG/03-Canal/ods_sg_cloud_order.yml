@@ -1,0 +1,97 @@
+dataSourceKey: sgDS
+destination: sg
+groupId: g_sg
+outerAdapterKey: adb_sg
+concurrent: false
+dbMapping:
+  database: assign_cw
+  table: cloud_order
+  targetDatabase: ODS
+  targetTable: ods_sg_cloud_order
+  # 主键
+  targetPk:
+    id: id
+  # 关闭全字段自动映射，手动定义字段映射
+  mapAllColumns: false
+  # 字段映射
+  targetColumns:
+    id: id
+    uid: uid
+    package_id: package_id
+    order_time: order_time
+    price: price
+    is_pay: is_pay
+    pay_type: pay_type
+    pay_time: pay_time
+    trans_no: trans_no
+    user_id: user_id
+    is_delete: is_delete
+    create_time: create_time
+    modify_time: modify_time
+    package_name: package_name
+    app_id: app_id
+    type: type
+    policy: policy
+    record_type: record_type
+    package_month: package_month
+    package_day: package_day
+    order_flag: order_flag
+    order_start_time: order_start_time
+    order_end_time: order_end_time
+    order_status: order_status
+    left_day: left_day
+    is_agreement: is_agreement
+    refund_status: refund_status
+    refund_desc: refund_desc
+    refund_file_path: refund_file_path
+    refund_amount: refund_amount
+    currency: currency
+    refund_time: refund_time
+    profit_status: profit_status
+    profit_refund: profit_refund
+    refund_receipt_file_path: refund_receipt_file_path
+    refund_bank_account: refund_bank_account
+    refund_opening_bank: refund_opening_bank
+    refund_bank_account_name: refund_bank_account_name
+    refund_type: refund_type
+    refund_complete_time: refund_complete_time
+    refund_check_time: refund_check_time
+    refund_username: refund_username
+    refund_check_username: refund_check_username
+    refund_complete_username: refund_complete_username
+    deal_time: deal_time
+    curr_org_code: curr_org_code
+    curr_manufacturer_code: curr_manufacturer_code
+    org_profit: org_profit
+    manufacturer_profit: manufacturer_profit
+    device_package_id: device_package_id
+    curr_channel_code: curr_channel_code
+    channel_profit: channel_profit
+    package_type: package_type
+    order_type: order_type
+    act_policy: act_policy
+    act_record_type: act_record_type
+    upgrade_order_id: upgrade_order_id
+    cloud_card_package_id: cloud_card_package_id
+    donor_name: donor_name
+    pay_sku_id: pay_sku_id
+    check_status: check_status
+    is_sandbox: is_sandbox
+    last_timer: last_timer
+    discount: discount
+    order_no: order_no
+    pay_order_no: pay_order_no
+    channel_code: channel_code
+    region_code: region_code
+    out_refund_no: out_refund_no
+    pay_method: pay_method
+    description: description
+    biz_type: biz_type
+    bind_order_id: bind_order_id
+    bind_type: bind_type
+    ext_param: ext_param
+fullBatch:
+  enable: true
+  startupTime: 2000-01-01 00:00:00
+  sleepBatchTime: 1000
+  batchSize: 1000

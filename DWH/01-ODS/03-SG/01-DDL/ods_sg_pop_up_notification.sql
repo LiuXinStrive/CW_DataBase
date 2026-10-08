@@ -1,0 +1,27 @@
+CREATE TABLE ods_sg_pop_up_notification(
+    `id` bigint comment '弹窗ID，源RDS业务主键',
+    `popup_name` varchar(200) comment '弹窗名称',
+    `status` tinyint comment '弹窗状态：0-草稿，1-启用，2-禁用',
+    `priority` int comment '优先级：0-10，数值越大优先级越高',
+    `remark` varchar(500) comment '备注',
+    `main_image` text comment '弹窗主图URL（750*1000px）',
+    `thumbnail_image` varchar(500) comment '图片缩略图URL',
+    `jump_link` varchar(1000) comment '跳转链接',
+    `popup_style` int comment '弹窗样式',
+    `advertising_id` bigint comment '广告位ID',
+    `show_close_button` tinyint(1) comment '关闭按钮显示：0-不显示，1-显示',
+    `start_date` datetime comment '生效开始日期',
+    `end_date` datetime comment '生效结束日期',
+    `exposure_count` bigint comment '曝光次数',
+    `click_count` bigint comment '点击次数',
+    `close_count` bigint comment '关闭次数',
+    `create_time` datetime comment '创建时间（自动触发）',
+    `update_time` datetime comment '更新时间（自动触发）',
+    `create_by` bigint comment '创建人ID',
+    `update_by` bigint comment '更新人ID',
+    `deleted` tinyint(1) comment '逻辑删除：0-未删除，1-已删除',
+    `is_effective` tinyint comment '广告生效时间：0限时有效 1永久生效',
+    `sys_update_time` DATETIME COMMENT '数据更新时间' DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+)comment'弹窗通知表';
+

@@ -1,0 +1,79 @@
+{
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "username": "canal",
+            "password": "qUJ%6Lp7V2k2",
+            "column": [
+                "id",
+                "uid",
+                "`policy`",
+                "record_type",
+                "is_enabled",
+                "start_time",
+                "end_time",
+                "create_time",
+                "modify_time",
+                "last_order",
+                "sync_id",
+                "package_id",
+                "app_user_id",
+                "advert",
+                "stream_type"
+            ],
+            "connection": [
+              {
+                "jdbcUrl": ["jdbc:mysql://127.0.0.1:3307/assign_cw?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&useLegacyDatetimeCode=false"],
+                "table": ["cloud_device"]
+              }
+            ],
+            "where": "1=1"
+          }
+        },
+        "writer": {
+          "name": "mysqlwriter",
+          "parameter": {
+            "username": "datax_write",
+            "password": "g4598I_1TP",
+            "connection": [
+              {
+                "jdbcUrl":"jdbc:mysql://amv-0xift73df8a799l21000000276o.ads.aliyuncs.com:3306/ODS?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&zeroDateTimeBehavior=convertToNull",
+                "table": ["ods_us_cloud_device"]
+              }
+            ],
+            "column": [
+                "id",
+                "uid",
+                "`policy`",
+                "record_type",
+                "is_enabled",
+                "start_time",
+                "end_time",
+                "create_time",
+                "modify_time",
+                "last_order",
+                "sync_id",
+                "package_id",
+                "app_user_id",
+                "advert",
+                "stream_type"
+            ],
+            "preSql": [],
+            "writeMode": "update"
+          }
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": 4
+      },
+      "errorLimit": {
+        "record": 0
+      }
+    }
+  }
+}

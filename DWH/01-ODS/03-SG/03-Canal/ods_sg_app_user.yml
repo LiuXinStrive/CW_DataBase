@@ -1,0 +1,58 @@
+dataSourceKey: sgDS
+destination: sg
+groupId: g_sg
+outerAdapterKey: adb_sg
+concurrent: false
+dbMapping:
+  database: assign_cw
+  table: app_user
+  targetDatabase: ODS
+  targetTable: ods_sg_app_user
+  # 主键
+  targetPk:
+    id: id
+  # 关闭全字段自动映射，手动定义字段映射
+  mapAllColumns: false
+  # 字段映射
+  targetColumns:
+    id: id
+    username: username
+    password: password
+    nickname: nickname
+    app: app
+    sex: sex
+    address: address
+    reg_time: reg_time
+    bind_num: bind_num
+    gmt_modify: gmt_modify
+    wx_id: wx_id
+    wx_name: wx_name
+    apple_sub: apple_sub
+    app_version: app_version
+    platform: platform
+    app_salt: app_salt
+    ty_pass: ty_pass
+    is_delete: is_delete
+    advert_status: advert_status
+    region: region
+    register_type: register_type
+    token: token
+    status: status
+    active_time: active_time
+    advert_time: advert_time
+    advert_type: advert_type
+    app_name: app_name
+    eye_care: eye_care
+    cloud_record_speed: cloud_record_speed
+    advert_user_name: advert_user_name
+    is_bind_device: is_bind_device
+    google_sub: google_sub
+    user_update_policy: user_update_policy
+    calling_code: calling_code
+    country_name: country_name
+    country_code: country_code
+fullBatch:
+  enable: true
+  startupTime: 2000-01-01 00:00:00
+  sleepBatchTime: 1000
+  batchSize: 1000

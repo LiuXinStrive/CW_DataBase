@@ -1,0 +1,37 @@
+dataSourceKey: sgDS
+destination: sg
+groupId: g_sg
+outerAdapterKey: adb_sg
+concurrent: false
+dbMapping:
+  database: assign_cw
+  table: cloud_device
+  targetDatabase: ODS
+  targetTable: ods_sg_cloud_device
+  # 主键
+  targetPk:
+    id: id
+  # 关闭全字段自动映射，手动定义字段映射
+  mapAllColumns: false
+  # 字段映射
+  targetColumns:
+      id: id
+      uid: uid
+      policy: policy
+      record_type: record_type
+      is_enabled: is_enabled
+      start_time: start_time
+      end_time: end_time
+      create_time: create_time
+      modify_time: modify_time
+      last_order: last_order
+      sync_id: sync_id
+      package_id: package_id
+      app_user_id: app_user_id
+      advert: advert
+      stream_type: stream_type
+fullBatch:
+  enable: true
+  startupTime: 2000-01-01 00:00:00
+  sleepBatchTime: 1000
+  batchSize: 1000

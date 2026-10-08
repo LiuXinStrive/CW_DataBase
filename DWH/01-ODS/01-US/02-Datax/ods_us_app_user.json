@@ -1,0 +1,121 @@
+{
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "username": "canal",
+            "password": "qUJ%6Lp7V2k2",
+            "column": [
+                "id",
+                "username",
+                "password",
+                "nickname",
+                "app",
+                "sex",
+                "address",
+                "reg_time",
+                "bind_num",
+                "gmt_modify",
+                "wx_id",
+                "wx_name",
+                "apple_sub",
+                "app_version",
+                "platform",
+                "app_salt",
+                "ty_pass",
+                "is_delete",
+                "advert_status",
+                "region",
+                "register_type",
+                "token",
+                "status",
+                "active_time",
+                "advert_time",
+                "advert_type",
+                "app_name",
+                "eye_care",
+                "cloud_record_speed",
+                "advert_user_name",
+                "is_bind_device",
+                "google_sub",
+                "user_update_policy",
+                "calling_code",
+                "country_name",
+                "country_code"
+            ],
+            "connection": [
+              {
+                "jdbcUrl": ["jdbc:mysql://127.0.0.1:3307/assign_cw?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&useLegacyDatetimeCode=false"],
+                "table": ["app_user"]
+              }
+            ],
+            "where": "1=1"
+          }
+        },
+        "writer": {
+          "name": "mysqlwriter",
+          "parameter": {
+            "username": "datax_write",
+            "password": "g4598I_1TP",
+            "connection": [
+              {
+                "jdbcUrl":"jdbc:mysql://amv-0xift73df8a799l21000000276o.ads.aliyuncs.com:3306/ODS?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&zeroDateTimeBehavior=convertToNull",
+                "table": ["ods_us_app_user"]
+              }
+            ],
+            "column": [
+                "id",
+                "username",
+                "password",
+                "nickname",
+                "app",
+                "sex",
+                "address",
+                "reg_time",
+                "bind_num",
+                "gmt_modify",
+                "wx_id",
+                "wx_name",
+                "apple_sub",
+                "app_version",
+                "platform",
+                "app_salt",
+                "ty_pass",
+                "is_delete",
+                "advert_status",
+                "region",
+                "register_type",
+                "token",
+                "status",
+                "active_time",
+                "advert_time",
+                "advert_type",
+                "app_name",
+                "eye_care",
+                "cloud_record_speed",
+                "advert_user_name",
+                "is_bind_device",
+                "google_sub",
+                "user_update_policy",
+                "calling_code",
+                "country_name",
+                "country_code"
+            ],
+            "preSql": [],
+            "writeMode": "update"
+          }
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": 4
+      },
+      "errorLimit": {
+        "record": 0
+      }
+    }
+  }
+}

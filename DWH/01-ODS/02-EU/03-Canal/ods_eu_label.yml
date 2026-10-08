@@ -1,0 +1,26 @@
+dataSourceKey: euDS
+destination: eu
+groupId: g_eu
+outerAdapterKey: adb_eu
+concurrent: false
+dbMapping:
+  database: assign_cw
+  table: label
+  targetDatabase: ODS
+  targetTable: ods_eu_label
+  # 主键
+  targetPk:
+    id: id
+  # 关闭全字段自动映射，手动定义字段映射
+  mapAllColumns: false
+  # 字段映射
+  targetColumns:
+    id: id
+    label_name: label_name
+    label_address: label_address
+    is_default: is_default
+fullBatch:
+  enable: true
+  startupTime: 2000-01-01 00:00:00
+  sleepBatchTime: 1000
+  batchSize: 1000
